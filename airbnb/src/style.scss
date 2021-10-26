@@ -1,0 +1,534 @@
+@import "./reset";
+@import "./variables";
+@mixin space {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin evenly {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.navLinks {
+    width: 100%;
+    height: 15vh;
+    box-shadow: 0 10px 10px #F6F6F6;
+    @include space;
+    .logo {
+        @include center;
+        margin: 60px;
+        .title {
+            color: $pink;
+        }
+    }
+    .logo img {
+        height: 50px;
+        width: 50px;
+    }
+    .host {
+        @include center  
+    }
+    .host .globe {
+        width: 20px;
+        height: 20px;
+        margin: 30px;
+    }
+    .host .link {
+        margin: 5px;
+        font-size: 20px;
+        padding: 10px;
+        transition: 0.5s;
+        cursor: pointer;
+        &:hover {
+            background: #F7F7F7;
+            border-radius: 10px;
+        }
+    }
+    .container {
+        height: 6vh;
+        width: 80px;
+        margin-right: 60px;
+        border-radius: 10px;
+        border: 1px solid #bfc2b8;
+        outline: none;
+        @include space;
+        padding: 10px;
+        &:hover {
+            box-shadow:0 5px 5px #cccbcb;
+        }
+        .icon-user {
+            height: 30px;
+            width: 30px;
+            border-radius: 30px;
+            text-align: center;
+            background: #717171;
+
+        }
+        .far {
+            margin-top: 6%;
+            font-size: 24px;
+            color: #bfc2b8;
+        }
+        .icon-bar {
+            font-size: 15px;
+        }
+    }
+}
+.form {
+    width: 40%;
+    height: 73vh;
+    text-align: center;
+    margin-left: 32%;
+    margin-top: 5%;
+    border: 1px solid #bfc2b8;
+    border-radius: 10px;
+    input {
+        margin: 15px;
+        padding: 15px 10px;
+        width: 450px;
+        border-radius: 10px;
+        border: 1px solid $black;
+    }
+    .in {
+        padding-top: 3%;
+        outline: none;
+        font-size: 25px;
+        padding-bottom: 3%;
+        border: none;
+    }
+    .create{
+        padding-top: 3%;
+        outline: none;
+        font-size: 25px;
+        padding-bottom: 3%;
+        border: none;
+        text-decoration: none;
+    }
+    .submit {
+        background: #E61E51;
+        font-size: 20px;
+        color: $white;
+        outline: none;
+        border: none;
+        &:hover {
+            background: #FF385C;
+        }
+    }
+    .create-account {
+        font-size: 15px;
+    }
+    .create-account a {
+        text-decoration:none;
+    }
+    .center {
+        margin-top: 2%;
+    }
+    .btn {
+        width: 450px;
+        padding: 15px 5px;
+        border: 1px solid #bfc2b8;
+        margin-top: 3%;
+        border-radius: 10px;
+        @include space;
+        margin-left: 9.5%;
+        &:hover {
+            border: 1px solid #000;
+        }
+    }
+    .btn img {
+        width: 20px;
+        height:20px;
+    }
+    .google {
+        padding-right: 33%;
+    }
+}
+.img-container {
+    width: 100%;
+    height: 90vh;
+    background-position: center;
+    background-size: cover;
+    background: url("https://a0.muscache.com/im/pictures/0c38042b-8685-4180-8d9b-12a6892ac6d8.jpg?im_q=highq&im_w=720");
+}
+.nav {
+    @include space;
+    .logoAir {
+        @include center;
+        margin: 60px;
+        .title {
+            color: $white;
+        }
+    }
+    .logoAir img {
+        height: 50px;
+        width: 50px;
+    }
+    .imgLinks ul {
+        display: inline-flex;
+        margin: 10px;
+        list-style: none;
+    }
+    .imgLinks ul li {
+        margin: 10px;
+        padding: 10px;
+        position: relative;
+    }
+    .imgLinks ul li::after {
+        content: "";
+        position: absolute;
+        background: $white;
+        display: block;
+        transition: 0.5s;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+    }
+    .imgLinks ul li:hover::after {
+        width: 90%;
+    }
+    .imgLinks ul li a {
+        text-decoration: none;
+        color:$white;
+    }
+    .imgHost {
+        @include space
+    }
+    .imgHost .link {
+        color: $white;
+        padding: 10px;
+        transition: 0.5s;
+    }
+    .imgHost .link:hover {
+        background: #717171;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    .imgHost .globe {
+        width: 20px;
+        height: 20px;
+        margin: 30px;
+        background: $white;
+    }
+    .containEl {
+        height: 6vh;
+        width: 80px;
+        margin-right: 60px;
+        border-radius: 10px;
+        background: $white;
+        border: 1px solid #bfc2b8;
+        outline: none;
+        @include space;
+        padding: 10px;
+        .icon-user {
+            height: 30px;
+            width: 30px;
+            border-radius: 30px;
+            text-align: center;
+            background: #717171;
+
+        }
+        .far {
+            margin-top: 6%;
+            font-size: 24px;
+            color: #bfc2b8;
+        }
+        .icon-bar {
+            font-size: 15px;
+        }
+
+    }
+    }
+.location {
+    text-align: center;
+    margin-top: 10%;
+    color: $black;
+    font-size: 25px;
+    .button {
+        margin-top: 2%;
+        padding: 20px 55px;
+        border-radius: 20px;
+        border: none;
+        outline: none;
+        font-size: 20px;
+        color: #A81997;
+        transition: 0.5s;
+        &:hover {
+            box-shadow:5px 5px 5px #717171;
+        }
+    }
+    .locationEl {
+        font-size: 25px;
+    }
+}
+.contentEl {
+    height: 70vh;
+    width: 100%;
+    .mainContent{
+        width: 80%;
+        height: 50vh;
+        padding: 50px;
+    }
+    .places {
+        width:130%;
+        height: 35vh;
+        margin-top: 2%;
+    }
+    .explore {
+        margin-top: 1%;
+    }
+    .boxes {
+        @include center;
+        flex-wrap: wrap;
+        .imageImg img {
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
+        }
+        .city {
+        margin:70px;
+            .cityName {
+                margin-bottom: 5px;
+                margin-left: -50%;
+            }
+            .cityTime {
+                margin-left: -50%;
+            }
+        }
+    }
+}
+.live {
+    width: 100%;
+    height: 60vh;
+    padding: 50px;
+    .livePlaces {
+        width: 100%;
+        height: 50vh;
+        margin-top: 2%;
+        .box {
+            @include space;
+        }
+        .box img {
+            width: 250px;
+            height: 250px;
+            border-radius: 10px;
+        }
+        .liveName {
+            margin-top: 0.5%;
+        }
+    }
+}
+.discover {
+    width: 100%;
+    padding: 50px;
+    height: 90vh;
+    .discoverTitle {
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+    .discoverEl {
+        width: 100%;
+        height: 60vh;
+        .mainContentLink {
+            @include space;
+            img {
+                width: 100%;
+                height: 50vh;
+                border-radius: 10px;
+            }
+        }
+        .experiences {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+    }
+}
+.footer {
+    height: 20vh;
+    padding: 50px;
+    width: 100%;
+    @include space;
+}
+.footerContainer {
+    border-top: 1px solid $black;
+    @include space;
+    width: 100%
+}
+.footer_left {
+    @include space;
+}
+.footerLeftLinks ul{
+    display: inline-flex;
+    margin: 10px;
+    list-style: none;
+}
+.footerLeftLinks ul li {
+    margin: 10px;
+    padding: 10px;
+}
+.footerLeftLinks ul li a {
+    text-decoration: none;
+    color: $black;
+}
+.footer_right {
+    display: flex;
+}
+.footer_right_media ul {
+    display: inline-flex;
+    list-style: none;
+    padding: 10px;
+}
+.footer_right_media ul li {
+    margin: 5px;
+    padding: 5px;
+}
+.footer_right_media ul li a {
+    text-decoration: none;
+}
+.footer_right_media .fab {
+    color: $black;
+}
+.containPowerEl {
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    padding: 5px;
+    background: $white;
+    cursor: pointer;
+    @include space;
+    .icon-power .fas {
+        color: #ff0000;
+    }
+    .logout {
+        cursor: pointer;
+    }
+}
+
+
+@media(max-width:700px) {
+    .navLinks {
+        padding: 0;
+        margin: 0;
+        .logo {
+            margin: 10px;
+        }
+        .title {
+            font-size: 15px;
+        }
+        .logo img{
+            width: 20px;
+            height: 20px;
+        }
+        .host .link {
+            font-size: 12px;
+        }
+        .host .globe {
+            width: 10px;
+            height: 10px;
+        }
+        .container {
+            width: 60px;
+            height: 30px;
+            margin-right: 0;
+            .icon-bar {
+                font-size: 10px;
+            }
+            .icon-user{
+            background: none;
+        }
+            .far {
+                margin-top: 25%;
+                font-size: 15px;
+                color: #bfc2b8;
+            }
+        }
+    }
+    .form {
+        width: 98%;
+        height: 73vh;
+        text-align: center;
+        margin-left: 1%;
+        margin-top: 5%;
+        border: 1px solid #bfc2b8;
+        border-radius: 10px;
+        input {
+            margin: 15px;
+            padding: 15px 10px;
+            width: 250px;
+            border-radius: 10px;
+            border: 1px solid $black;
+        }
+        .in {
+            padding-top: 3%;
+            outline: none;
+            font-size: 25px;
+            padding-bottom: 3%;
+            border: none;
+        }
+        .create{
+            padding-top: 3%;
+            outline: none;
+            font-size: 25px;
+            padding-bottom: 3%;
+            border: none;
+            text-decoration: none;
+        }
+        .submit {
+            background: #E61E51;
+            font-size: 20px;
+            color: $white;
+            outline: none;
+            border: none;
+            &:hover {
+                background: #FF385C;
+            }
+        }
+        .create-account {
+            font-size: 15px;
+        }
+        .create-account a {
+            text-decoration:none;
+        }
+        .center {
+            margin-top: 2%;
+        }
+        .btn {
+            width: 270px;
+            padding: 15px 5px;
+            border: 1px solid #bfc2b8;
+            margin-top: 3%;
+            border-radius: 10px;
+            @include space;
+            margin-left: 13%;
+            &:hover {
+                border: 1px solid #000;
+            }
+        }
+        .btn img {
+            width: 20px;
+            height:20px;
+        }
+        .google {
+            padding-right: 10%;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
